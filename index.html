@@ -25,6 +25,8 @@
             color: var(--plomo);
             line-height: 1.6;
             background-color: var(--gris-claro);
+            overflow-x: hidden;
+            width: 100%;
         }
 
         /* HEADER */
@@ -889,7 +891,7 @@
             box-shadow: 0 2px 8px rgba(90, 122, 90, 0.1);
         }
 
-        .faq-pregunta {
+        .faq-question {
             width: 100%;
             padding: 1.5rem;
             background: linear-gradient(135deg, var(--verde-bosque), var(--verde-menta));
@@ -905,7 +907,7 @@
             transition: all 0.3s;
         }
 
-        .faq-pregunta:hover {
+        .faq-question:hover {
             background: linear-gradient(135deg, #4a6a4a, #98c598);
             transform: translateX(5px);
         }
@@ -918,11 +920,11 @@
             text-align: right;
         }
 
-        .faq-pregunta.active .faq-icon {
+        .faq-question.active .faq-icon {
             transform: rotate(45deg);
         }
 
-        .faq-respuesta {
+        .faq-answer {
             background: var(--gris-claro);
             padding: 0;
             max-height: 0;
@@ -930,12 +932,12 @@
             transition: all 0.3s ease;
         }
 
-        .faq-respuesta.active {
+        .faq-answer.active {
             padding: 1.5rem;
             max-height: 500px;
         }
 
-        .faq-respuesta p {
+        .faq-answer p {
             color: var(--plomo);
             font-size: 1rem;
             line-height: 1.6;
@@ -943,12 +945,12 @@
         }
 
         @media (max-width: 768px) {
-            .faq-pregunta {
+            .faq-question {
                 font-size: 1rem;
                 padding: 1rem;
             }
 
-            .faq-respuesta.active {
+            .faq-answer.active {
                 padding: 1rem;
             }
         }
@@ -1003,9 +1005,64 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+                width: 100vw;
+                max-width: 100%;
+            }
+
+            header {
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .header-container {
+                padding: 0 1rem;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+
+            .logo-text h1 {
+                font-size: 1.3rem;
+            }
+
+            .logo-text p {
+                font-size: 0.75rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+                padding: 0.5rem 0.8rem;
+            }
+
             .contacto-floating {
-                bottom: 70px;
-                left: 2rem;
+                bottom: 2rem;
+                left: 1rem;
+                width: 55px;
+                height: 55px;
+            }
+
+            .whatsapp-floating {
+                bottom: 2rem;
+                right: 1rem;
+                width: 55px;
+                height: 55px;
+            }
+
+            section {
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .hero {
+                width: 100%;
+                overflow-x: hidden;
+                padding: 40px 1rem;
             }
         }
 
@@ -1284,51 +1341,51 @@
             <h2 class="section-title">Preguntas Frecuentes</h2>
             
             <div class="faq-item">
-                <button class="faq-pregunta" onclick="toggleFAQ(this)">
+                <button class="faq-question" onclick="toggleFaq(this)">
                     <span>¿Debo quitarme la ropa?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-respuesta">
+                <div class="faq-answer">
                     <p>No completamente. Dependiendo del tipo de masaje, trabajamos sobre piel desnuda o parcialmente cubierta. Siempre respetando tu comodidad y pudor.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-pregunta" onclick="toggleFAQ(this)">
+                <button class="faq-question" onclick="toggleFaq(this)">
                     <span>¿Atiendes adultos mayores?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-respuesta">
+                <div class="faq-answer">
                     <p>Sí, especialmente. Adaptamos técnicas según edad y condiciones físicas. Perfectamente seguro para todas las edades.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-pregunta" onclick="toggleFAQ(this)">
+                <button class="faq-question" onclick="toggleFaq(this)">
                     <span>¿Trabajas sábados?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-respuesta">
+                <div class="faq-answer">
                     <p>Sí, de lunes a viernes 9-20 hrs, y sábados 9-16 hrs.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-pregunta" onclick="toggleFAQ(this)">
+                <button class="faq-question" onclick="toggleFaq(this)">
                     <span>¿Vas a domicilio?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-respuesta">
+                <div class="faq-answer">
                     <p>Sí, ese es nuestro servicio principal. Llevamos los masajes a tu hogar, empresa o institución en Viña del Mar y Valparaíso.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-pregunta" onclick="toggleFAQ(this)">
+                <button class="faq-question" onclick="toggleFaq(this)">
                     <span>¿Cómo se paga?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-respuesta">
+                <div class="faq-answer">
                     <p>Efectivo o transferencia bancaria.</p>
                 </div>
             </div>
