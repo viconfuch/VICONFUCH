@@ -204,6 +204,37 @@
             border-radius: 2px;
         }
 
+        .frase-destacada {
+            background: linear-gradient(135deg, rgba(90, 122, 90, 0.08), rgba(168, 213, 168, 0.12));
+            border-left: 4px solid var(--verde-bosque);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 900px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(90, 122, 90, 0.15);
+        }
+
+        .frase-destacada p {
+            color: var(--verde-bosque);
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.8;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .frase-destacada {
+                padding: 1.5rem;
+                margin: 1.5rem auto;
+            }
+
+            .frase-destacada p {
+                font-size: 1rem;
+            }
+        }
+
         .servicios-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1168,6 +1199,11 @@
         <h2 class="section-title">Nuestros Servicios</h2>
         
         <h3 style="text-align: center; color: var(--verde-bosque); margin-bottom: 2rem; margin-top: 2rem;">Para Instituciones (Silla Ergonómica)</h3>
+        
+        <div class="frase-destacada">
+            <p>"El bienestar laboral no es un beneficio extra; es una forma de reconocer a las personas que hacen posible el trabajo diario de una organización."</p>
+        </div>
+
         <div class="servicios-grid">
             <div class="servicio-card">
                 <h3>🌳 Roble</h3>
